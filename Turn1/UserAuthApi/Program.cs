@@ -1,4 +1,6 @@
+using AspNetCoreRateLimit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using UserAuthApi;
@@ -30,6 +32,12 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
+builder.Services.AddOptions();
+builder.Services.AddMemoryCache();
+builder.Services.Configure<IpRateLimitOptions>(builder.Configuration.GetSection("IpRateLimiting"));
+builder.Services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+
 builder.Services.AddControllers();
 builder.Services.AddTransient<IUserRepository, UserRepository>(); 
 builder.Services.AddTransient<IUserService, UserService>();
@@ -50,6 +58,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 });
 
+app.UseIpRateLimiting();
 app.UseHttpsRedirection();
 
 //var summaries = new[]

@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAuthApi", "UserAuthApi.csproj", "{218FFE9F-E414-4FC7-8F55-52B1CBE7FA72}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Turn-1", "Turn-1", "{13BCD55E-ADD1-428F-BD34-92995DC06863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAuthApiT1", "..\UserAuthApiT1\UserAuthApiT1.csproj", "{53ACFD33-2169-441A-A867-886CCF8F4234}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{218FFE9F-E414-4FC7-8F55-52B1CBE7FA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{218FFE9F-E414-4FC7-8F55-52B1CBE7FA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{218FFE9F-E414-4FC7-8F55-52B1CBE7FA72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53ACFD33-2169-441A-A867-886CCF8F4234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53ACFD33-2169-441A-A867-886CCF8F4234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53ACFD33-2169-441A-A867-886CCF8F4234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53ACFD33-2169-441A-A867-886CCF8F4234}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53ACFD33-2169-441A-A867-886CCF8F4234} = {13BCD55E-ADD1-428F-BD34-92995DC06863}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3536561-E0A2-49CF-B06C-058D880D689B}
